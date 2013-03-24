@@ -18,6 +18,7 @@ package com.haarman.listviewanimations;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 import android.widget.BaseAdapter;
 
@@ -26,7 +27,7 @@ import android.widget.BaseAdapter;
  */
 public abstract class ArrayAdapter<T> extends BaseAdapter {
 
-	private ArrayList<T> mItems;
+	private List<T> mItems;
 
 	/**
 	 * Creates a new ArrayAdapter with an empty list.
@@ -39,7 +40,7 @@ public abstract class ArrayAdapter<T> extends BaseAdapter {
 	 * Creates a new ArrayAdapter with the specified list, or an empty list if
 	 * items == null.
 	 */
-	public ArrayAdapter(ArrayList<T> items) {
+	public ArrayAdapter(List<T> items) {
 		if (items != null) {
 			mItems = items;
 		} else {

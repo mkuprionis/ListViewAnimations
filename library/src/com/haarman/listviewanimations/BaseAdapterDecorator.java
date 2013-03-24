@@ -18,8 +18,8 @@ package com.haarman.listviewanimations;
 import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.BaseAdapter;
-import android.widget.ListView;
 
 /**
  * A decorator class that enables decoration of an instance of the BaseAdapter
@@ -32,13 +32,13 @@ public abstract class BaseAdapterDecorator extends BaseAdapter {
 
 	protected final BaseAdapter mDecoratedBaseAdapter;
 
-	private ListView mListView;
+	private AbsListView mListView;
 
 	public BaseAdapterDecorator(BaseAdapter baseAdapter) {
 		mDecoratedBaseAdapter = baseAdapter;
 	}
 
-	public void setListView(ListView listView) {
+	public void setListView(AbsListView listView) {
 		mListView = listView;
 
 		if (mDecoratedBaseAdapter instanceof BaseAdapterDecorator) {
@@ -46,7 +46,7 @@ public abstract class BaseAdapterDecorator extends BaseAdapter {
 		}
 	}
 
-	public ListView getListView() {
+	public AbsListView getListView() {
 		return mListView;
 	}
 
